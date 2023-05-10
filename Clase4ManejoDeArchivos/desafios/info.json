@@ -1,0 +1,17 @@
+{
+	"contenidoString": "{\r\n    \"name\": \"clase4manejodearchivos\",\r\n    \"version\": \"1.0.0\",\r\n    \"description\": \"\",\r\n    \"main\": \"desafio1.js\",\r\n    \"type\": \"module\",\r\n    \"scripts\": {\r\n      \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\r\n    },\r\n    \"keywords\": [],\r\n    \"author\": \"\",\r\n    \"license\": \"ISC\"\r\n  }\r\n  ",
+	"contenidoObj": {
+		"name": "clase4manejodearchivos",
+		"version": "1.0.0",
+		"description": "",
+		"main": "desafio1.js",
+		"type": "module",
+		"scripts": {
+			"test": "echo \"Error: no test specified\" && exit 1"
+		},
+		"keywords": [],
+		"author": "",
+		"license": "ISC"
+	},
+	"size": 298
+}
