@@ -6,7 +6,7 @@ import passport from 'passport';
 
 const router = Router();
 
-router.post('/register', passport.authenticate('register', { failureRedirect: '/failregister' }), async (req, res) => {
+router.post('/register', passport.authenticate('register', { failureRedirect: '/api/sessions/failregister' }), async (req, res) => {
     res.send({ status: "success", message: "User registered" });
 })
 
@@ -14,7 +14,7 @@ router.get('/failregister', (req, res) => {
     res.status(400).send({ status: "error", error: "Registry fail" });
 });
 
-router.post('/login', passport.authenticate('login', { failureRedirect: '/faillogin'}), async (req, res) => {
+router.post('/login', passport.authenticate('login', { failureRedirect: '/api/sessions/faillogin'}), async (req, res) => {
     if (!req.user) return res.status(400).send({ status: "error", error: "Incorrect credentials" });
 
     
