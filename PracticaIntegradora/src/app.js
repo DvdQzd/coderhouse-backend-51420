@@ -68,3 +68,8 @@ app.listen(PORT, () => {
 // hashear password
 // guardar usando modelo User
 // devolvemos un 200 OK
+
+// 1.-
+// Crear endpoint que reciba el email de la cuenta que queremos recuperar y envie 
+// mail de recuperacion de pass
+
