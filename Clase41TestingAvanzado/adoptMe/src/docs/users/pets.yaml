@@ -1,0 +1,54 @@
+paths:
+  /api/pets/:
+    get:
+      summary: Obtiene todas las mascotas
+      tags:
+        - Pets
+      responses:
+        "200":
+          description: Las mascotas fueron obtenidas satisfactoriamente de la base de datos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#components/schemas/Pet"
+        "500":
+          description: Error interno del servidor... blah blah blah
+    post:
+      summary: Crea una nueva mascota
+      tags:
+        - Pets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#components/schemas/Pet"
+      responses:
+        "201":
+          description: La mascota fue creada satisfactoriamente en la base de datos
+          content:
+            application/json:
+              schema:
+                $ref: "#components/schemas/Pet"
+        "500":
+          description: Error interno del servidor... blah blah blah
+components:
+  schemas:
+    Pet:
+      type: object
+      properties:
+        name:
+          type: string
+          required: true
+        specie: 
+          type: string
+          required: true
+        birthDate:
+          type: string
+          required: true
+        owner:
+          $ref: "#components/schemas/User"
+        image: 
+          type: string
