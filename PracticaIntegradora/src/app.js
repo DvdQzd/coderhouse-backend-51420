@@ -48,7 +48,7 @@ app.use("/api/alive", (req, res) => {
 });
 
 app.use("/api/players", PlayersRoutes);
-app.use('/api/session', UsersRoutes);
+app.use('/api/users', UsersRoutes);
 
 app.listen(PORT, () => {
   displayRoutes(app);
